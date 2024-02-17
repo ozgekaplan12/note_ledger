@@ -4,6 +4,36 @@
 
 Bu Rust programı, kullanıcıların metin tabanlı notlar oluşturabileceği ve yönetebileceği basit bir not defteri uygulamasını içerir. Kullanıcılar notlar ekleyebilir, düzenleyebilir, silebilir ve arayabilir.
 
+## Kullanım
+
+1. Öncelikle, Rust derleyicisinin yüklü olduğundan emin olun. Rust derleyicisini yüklemek için [Rust'un resmi web sitesini](https://www.rust-lang.org/tools/install) ziyaret edebilirsiniz.
+
+2. Depoyu klonlayın:
+
+3. Proje klasörüne gidin
+
+4. Uygulamayı derleyin ve çalıştırın
+
+5. Uygulama çalıştırıldığında, kullanıcı menüsü görüntülenecek. Menüdeki seçenekleri kullanarak notlarınızı yönetebilirsiniz.
+
+## Özellikler
+
+- Not ekleme: Kullanıcılar yeni notlar ekleyebilir.
+- Not düzenleme: Kullanıcılar mevcut notları düzenleyebilir.
+- Not silme: Kullanıcılar istedikleri notları silebilir.
+- Notları listeleme: Kullanıcılar tüm notları listeleme seçeneğiyle notları görüntüleyebilir.
+- Not arama: Kullanıcılar belirli bir anahtar kelimeye göre notları arayabilir.
+
+## Katkılar
+
+- Bu proje hakkında herhangi bir geribildirim veya katkıda bulunmak isterseniz, lütfen bir pull isteği açın veya bir konu başlatın. Katkılarınızı bekliyorum!
+
+## Lisans
+
+Bu proje MIT lisansı altında lisanslanmıştır. Daha fazla bilgi için [LICENSE](LICENSE) dosyasına bakın.
+
+
+
 
 Welcome to your new note_ledger project and to the internet computer development community. By default, creating a new project adds this README and some template files to your project directory. You can edit these template files to customize your project and to include your own code to speed up the development cycle.
 
