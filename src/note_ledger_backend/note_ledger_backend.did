@@ -1,3 +1,10 @@
-service : {
-    "greet": (text) -> (text) query;
+type Note {
+    title: Text;
+    content: Text;
 }
+
+service : {
+    add_note: (Note) -> ();
+    list_notes: () -> (vec Note);
+    remove_note: (nat) -> (Note) query;
+};
