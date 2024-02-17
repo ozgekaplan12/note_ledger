@@ -1,5 +1,10 @@
 # note_ledger
 
+# Rust Not Defteri Uygulaması
+
+Bu Rust programı, kullanıcıların metin tabanlı notlar oluşturabileceği ve yönetebileceği basit bir not defteri uygulamasını içerir. Kullanıcılar notlar ekleyebilir, düzenleyebilir, silebilir ve arayabilir.
+
+
 Welcome to your new note_ledger project and to the internet computer development community. By default, creating a new project adds this README and some template files to your project directory. You can edit these template files to customize your project and to include your own code to speed up the development cycle.
 
 To get started, you might want to explore the project directory structure and the default configuration file. Working with this project in your development environment will not affect any production deployment or identity tokens.
