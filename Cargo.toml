@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "src/note_ledger_backend"
+]
+resolver = "2"

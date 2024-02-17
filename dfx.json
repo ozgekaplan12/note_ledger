@@ -1,0 +1,27 @@
+{
+  "canisters": {
+    "note_ledger_backend": {
+      "candid": "src/note_ledger_backend/note_ledger_backend.did",
+      "package": "note_ledger_backend",
+      "type": "rust"
+    },
+    "note_ledger_frontend": {
+      "dependencies": [
+        "note_ledger_backend"
+      ],
+      "source": [
+        "src/note_ledger_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "note_ledger_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
