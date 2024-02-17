@@ -3,6 +3,10 @@ name = "note_ledger_backend"
 version = "0.1.0"
 edition = "2021"
 
+
+[[bin]]
+name = "note_ledger"   # Projeyi çalıştırırken kullanacağınız isim
+path = "src/lib.rs"   # Ana Rust dosyanızın yolu
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [lib]
