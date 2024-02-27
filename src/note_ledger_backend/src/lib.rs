@@ -53,7 +53,6 @@ impl NoteManager {
 }
 
 fn process_image(image_path: &str) -> String {
-    // Resmi oku
     let img = ImageReader::open(image_path)
         .unwrap()
         .decode()
