@@ -59,10 +59,10 @@ fn process_image(image_path: &str) -> String {
         .decode()
         .expect("Resim açılamadı");
 
-    // Resmi metne dönüştür
+    // Convert image to text
     let mut tesseract = Tesseract::new();
     tesseract.set_image(&img);
-    tesseract.set_language("eng"); // OCR dilini İngilizce olarak ayarladık
+    tesseract.set_language("eng"); 
     tesseract.get_text().expect("OCR hatası")
 }
 
