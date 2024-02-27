@@ -1,5 +1,7 @@
 use std::fs::OpenOptions;
 use std::io::{self, BufRead, BufReader, Write};
+use image::{io::Reader as ImageReader, DynamicImage, GenericImageView};
+use tesseract::Tesseract;
 
 struct Note {
     title: String,
@@ -42,6 +44,26 @@ impl NoteManager {
             println!("{}. {}", index + 1, note.title);
         }
     }
+
+    fn add_note_from_image(&mut self, title: String, image_path: &str) {
+        let content = process_image(image_path);
+        let note = Note::new(title, content);
+        self.add_note(note);
+    }
+}
+
+fn process_image(image_path: &str) -> String {
+    // Resmi oku
+    let img = ImageReader::open(image_path)
+        .unwrap()
+        .decode()
+        .expect("Resim açılamadı");
+
+    // Resmi metne dönüştür
+    let mut tesseract = Tesseract::new();
+    tesseract.set_image(&img);
+    tesseract.set_language("eng"); // OCR dilini İngilizce olarak ayarladık
+    tesseract.get_text().expect("OCR hatası")
 }
 
 fn main() {
@@ -51,7 +73,8 @@ fn main() {
         println!("1. Not Ekle");
         println!("2. Notları Listele");
         println!("3. Not Sil");
-        println!("4. Çıkış");
+        println!("4. Fotoğraftan Not Al");
+        println!("5. Çıkış");
 
         let mut choice = String::new();
         io::stdin().read_line(&mut choice).expect("Okuma hatası");
@@ -92,6 +115,15 @@ fn main() {
                 }
             }
             Ok(4) => {
+                println!("Resmin dosya yolunu girin:");
+                let mut image_path = String::new();
+                io::stdin().read_line(&mut image_path).expect("Okuma hatası");
+
+                let title = String::from("Not (Fotoğraf)");
+
+                note_manager.add_note_from_image(title, image_path.trim());
+            }
+            Ok(5) => {
                 println!("Çıkılıyor...");
                 break;
             }
